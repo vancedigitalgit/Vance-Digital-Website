@@ -43,3 +43,9 @@ next-env.d.ts
 # raw stock footage / screen recordings dropped at repo root, not part of the app
 /*.mp4
 /*.mov
+
+# internal Vance Digital notes (pricing, ICP, sales strategy) — repo is public, keep these local only
+/CLAUDE.md
+/AGENTS.md
+/NEW-CHAT-PROMPT.md
+/.claude/
