@@ -153,52 +153,54 @@ export function Header() {
       <div
         id="site-menu"
         aria-hidden={!open}
-        className={`fixed inset-0 z-40 flex flex-col justify-center bg-[var(--color-bg)] transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 overflow-y-auto bg-[var(--color-bg)] transition-opacity duration-300 ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <Container className="md:grid md:grid-cols-[2fr_1fr] md:items-center md:gap-14">
-          <nav className="grid grid-cols-1 xl:grid-cols-2 xl:gap-x-8">
-            {NAV_ITEMS.map((item, i) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className={`group flex items-baseline gap-4 border-b border-[var(--color-line)] py-4 transition-all duration-300 ${
-                  open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-                }`}
-                style={{ transitionDelay: open ? `${80 + i * 60}ms` : "0ms" }}
-              >
-                <span className="font-display shrink-0 text-[13px] text-[var(--color-muted)]">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="font-display text-[19px] font-bold tracking-tight text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-accent)] sm:whitespace-nowrap sm:text-[28px] xl:text-[32px]">
-                  {item.label}
-                </span>
-              </a>
-            ))}
-          </nav>
+        <div className="flex min-h-full flex-col justify-center py-24 sm:py-28">
+          <Container className="md:grid md:grid-cols-[2fr_1fr] md:items-center md:gap-14">
+            <nav className="grid grid-cols-1 xl:grid-cols-2 xl:gap-x-8">
+              {NAV_ITEMS.map((item, i) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={`group flex items-baseline gap-4 border-b border-[var(--color-line)] py-4 transition-all duration-300 ${
+                    open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                  }`}
+                  style={{ transitionDelay: open ? `${80 + i * 60}ms` : "0ms" }}
+                >
+                  <span className="font-display shrink-0 text-[13px] text-[var(--color-muted)]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="font-display text-[19px] font-bold tracking-tight text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-accent)] sm:whitespace-nowrap sm:text-[28px] xl:text-[32px]">
+                    {item.label}
+                  </span>
+                </a>
+              ))}
+            </nav>
 
-          <div
-            className={`mt-10 rounded-2xl border border-[var(--color-line)] bg-[var(--color-bg-raised)] p-7 transition-all duration-300 md:mt-0 ${
-              open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-            }`}
-            style={{ transitionDelay: open ? `${80 + NAV_ITEMS.length * 60}ms` : "0ms" }}
-          >
-            <h3 className="font-display text-[20px] font-bold leading-tight text-[var(--color-ink)]">
-              Ready to stop retyping orders by hand?
-            </h3>
-            <p className="mt-2 text-[13px] leading-relaxed text-[var(--color-muted)]">
-              Twenty minutes, no pitch, no price. Just a map of where your
-              order intake breaks down.
-            </p>
-            <div className="mt-5">
-              <Button size="lg" className="w-full">
-                Book Your Audit
-              </Button>
+            <div
+              className={`mt-10 rounded-2xl border border-[var(--color-line)] bg-[var(--color-bg-raised)] p-7 transition-all duration-300 md:mt-0 ${
+                open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+              }`}
+              style={{ transitionDelay: open ? `${80 + NAV_ITEMS.length * 60}ms` : "0ms" }}
+            >
+              <h3 className="font-display text-[20px] font-bold leading-tight text-[var(--color-ink)]">
+                Ready to stop retyping orders by hand?
+              </h3>
+              <p className="mt-2 text-[13px] leading-relaxed text-[var(--color-muted)]">
+                Twenty minutes, no pitch, no price. Just a map of where your
+                order intake breaks down.
+              </p>
+              <div className="mt-5">
+                <Button size="lg" className="w-full">
+                  Book Your Audit
+                </Button>
+              </div>
             </div>
-          </div>
-        </Container>
+          </Container>
+        </div>
       </div>
 
       {open && (
