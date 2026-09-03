@@ -34,7 +34,7 @@ export function SectionCta({
         </p>
       )}
       <div className="mt-2">
-        <Button size="md">Book Your Audit</Button>
+        <Button size="md">Contact Us</Button>
       </div>
     </div>
   );

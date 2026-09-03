@@ -46,7 +46,7 @@ export function FinalCta() {
               Ready to see where yours breaks down?
             </h2>
             <div className="mt-9 flex justify-center">
-              <Button size="lg">Book Your Audit</Button>
+              <Button size="lg">Contact Us</Button>
             </div>
             <p className="mt-8 text-[13px] font-medium text-[var(--color-ink-text)]">
               Call Renzo or Inigo directly.

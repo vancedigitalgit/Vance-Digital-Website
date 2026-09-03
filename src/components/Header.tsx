@@ -136,8 +136,8 @@ export function Header() {
           </a>
 
           <Button size="sm" className={open ? "max-sm:invisible" : ""}>
-            <span className="sm:hidden">Book Audit</span>
-            <span className="hidden sm:inline">Book Your Audit</span>
+            <span className="sm:hidden">Contact Us</span>
+            <span className="hidden sm:inline">Contact Us</span>
           </Button>
         </Container>
       </header>
@@ -195,7 +195,7 @@ export function Header() {
               </p>
               <div className="mt-5">
                 <Button size="lg" className="w-full">
-                  Book Your Audit
+                  Contact Us
                 </Button>
               </div>
             </div>

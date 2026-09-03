@@ -55,7 +55,7 @@ export function Hero() {
 
           <Reveal delay={0.14}>
             <div className="mt-9 flex justify-start">
-              <Button size="lg">Book Your Audit</Button>
+              <Button size="lg">Contact Us</Button>
             </div>
           </Reveal>
         </div>
