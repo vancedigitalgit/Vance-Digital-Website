@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Unbounded, Inter, Fraunces } from "next/font/google";
+import { Unbounded, Inter } from "next/font/google";
 import "./globals.css";
 
 const unbounded = Unbounded({
@@ -12,13 +12,6 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-});
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["normal", "italic"],
 });
 
 const description =
@@ -82,7 +75,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${unbounded.variable} ${inter.variable} ${fraunces.variable} h-full`}
+      className={`${unbounded.variable} ${inter.variable} h-full`}
     >
       <body className="min-h-full bg-[var(--color-bg)] text-[var(--color-text)] antialiased">
         <script

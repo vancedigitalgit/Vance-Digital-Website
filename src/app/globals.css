@@ -6,12 +6,12 @@
   --color-bg: #faf7f2;
   --color-bg-deep: #f0ebe1;
   --color-bg-raised: #ffffff;
-  --color-ink: #1c1811;
+  --color-ink: #0b1426;
   --color-accent: #e8622a;
   --color-accent-soft: rgba(232, 98, 42, 0.12);
-  --color-text: #1c1811;
-  --color-muted: rgba(28, 24, 17, 0.68);
-  --color-line: rgba(28, 24, 17, 0.12);
+  --color-text: #0b1426;
+  --color-muted: rgba(11, 20, 38, 0.68);
+  --color-line: rgba(11, 20, 38, 0.12);
   --color-accent-green: #136530;
   --color-accent-green-soft: rgba(19, 101, 48, 0.12);
   --color-accent-blue: #1d4ed8;
@@ -45,8 +45,8 @@
     a small number of deliberate high-contrast moments (currently just
     Product's portal stage), not a site-wide dark mode.
   */
-  --color-ink-bg: #1c1811;
-  --color-ink-bg-raised: #2a241a;
+  --color-ink-bg: #0b1426;
+  --color-ink-bg-raised: #19202f;
   --color-ink-text: #faf7f2;
   --color-ink-muted: rgba(250, 247, 242, 0.68);
   --color-ink-line: rgba(250, 247, 242, 0.14);
@@ -76,7 +76,6 @@
   --color-ink-accent: var(--color-ink-accent);
   --color-ink-accent-soft: var(--color-ink-accent-soft);
   --font-display: var(--font-unbounded);
-  --font-serif: var(--font-fraunces);
   --font-body: var(--font-body);
 }
 

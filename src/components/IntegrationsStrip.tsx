@@ -6,7 +6,7 @@ const PLATFORMS = ["Cin7", "Xero", "MYOB"];
 export function IntegrationsStrip() {
   return (
     <div
-      className="seam seam-b"
+      className="seam seam-b bg-[var(--color-bg-deep)]"
       style={{ paddingTop: "var(--space-section-tight)", paddingBottom: "var(--space-section-tight)" }}
     >
       <Container>

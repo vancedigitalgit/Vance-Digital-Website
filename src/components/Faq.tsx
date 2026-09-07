@@ -79,7 +79,7 @@ export function Faq() {
                       <p
                         className={
                           "serif" in item && item.serif
-                            ? "font-serif text-[17px] leading-relaxed text-[var(--color-ink)] italic"
+                            ? "text-[17px] leading-relaxed text-[var(--color-ink)] italic"
                             : "text-[15px] leading-relaxed text-[var(--color-muted)]"
                         }
                       >

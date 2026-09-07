@@ -5,8 +5,6 @@ import { useReducedMotion, useScroll } from "framer-motion";
 import { Container } from "./Container";
 import { Reveal } from "./Reveal";
 import { ScrollStepCard } from "./ScrollStepCard";
-import { ProcessPath } from "./ProcessPath";
-import { ProcessLoopBack } from "./ProcessLoopBack";
 
 const STEPS = [
   {
@@ -66,10 +64,7 @@ export function HowItWorks() {
         </div>
 
         <div ref={timelineRef} className="relative mt-16">
-          <div className="hidden lg:block">
-            <ProcessPath scrollYProgress={scrollYProgress} reduceMotion={Boolean(reduceMotion)} />
-          </div>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 lg:-mt-3">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {STEPS.map((step, i) => (
               <ScrollStepCard
                 key={step.n}
@@ -83,10 +78,7 @@ export function HowItWorks() {
               />
             ))}
           </div>
-          <div className="hidden lg:block">
-            <ProcessLoopBack />
-          </div>
-          <p className="mt-8 text-center text-[12px] font-medium tracking-wide text-[var(--color-muted)] lg:hidden">
+          <p className="mt-8 text-center text-[12px] font-medium tracking-wide text-[var(--color-muted)]">
             Then we come back and find the next thing.
           </p>
         </div>

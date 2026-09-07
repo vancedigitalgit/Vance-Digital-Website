@@ -5,7 +5,6 @@ import { Container } from "./Container";
 import { Reveal } from "./Reveal";
 import { PortalDemo } from "./PortalDemo";
 import { SectionCta } from "./SectionCta";
-import { ChannelTag } from "./ChaosFeed";
 
 const POINTS = [
   "Nothing lives in one person's head. Anyone on the team can see where an order stands.",
@@ -27,13 +26,7 @@ export function Product() {
       <Container>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <div className="flex items-center justify-center gap-2">
-              <ChannelTag channel="Phone" tone="ink" />
-              <ChannelTag channel="Text" tone="ink" />
-              <ChannelTag channel="Email" tone="ink" />
-              <ChannelTag channel="Fax" tone="ink" />
-            </div>
-            <h2 className="mt-4 font-display text-[32px] font-bold leading-[1.1] tracking-tight text-[var(--color-ink-text)] [text-wrap:balance] md:text-[var(--text-h2)]">
+            <h2 className="font-display text-[32px] font-bold leading-[1.1] tracking-tight text-[var(--color-ink-text)] [text-wrap:balance] md:text-[var(--text-h2)]">
               We call it{" "}
               <span className="text-[var(--color-ink-accent)]">Vance Portal.</span>
             </h2>

@@ -26,7 +26,7 @@ export function Button({
 
   const variants = {
     solid:
-      "bg-[var(--color-accent)] text-white shadow-[0_3px_0_0_rgba(28,24,17,0.85)] hover:brightness-110 hover:-translate-y-px hover:shadow-[0_4px_0_0_rgba(28,24,17,0.85)] active:translate-y-px active:shadow-[0_1px_0_0_rgba(28,24,17,0.85)]",
+      "bg-[var(--color-accent)] text-white shadow-[0_3px_0_0_rgba(11,20,38,0.85)] hover:brightness-110 hover:-translate-y-px hover:shadow-[0_4px_0_0_rgba(11,20,38,0.85)] active:translate-y-px active:shadow-[0_1px_0_0_rgba(11,20,38,0.85)]",
     ghost:
       "border border-[var(--color-ink)]/25 text-[var(--color-ink)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]",
   };

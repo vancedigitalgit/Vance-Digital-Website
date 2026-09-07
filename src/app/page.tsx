@@ -6,6 +6,7 @@ import { Product } from "@/components/Product";
 import { Capabilities } from "@/components/Capabilities";
 import { IntegrationsStrip } from "@/components/IntegrationsStrip";
 import { Proof } from "@/components/Proof";
+import { About } from "@/components/About";
 import { AcceleratorTeaser } from "@/components/AcceleratorTeaser";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Calculator } from "@/components/Calculator";
@@ -26,9 +27,10 @@ export default function Home() {
         <IntegrationsStrip />
         <HowItWorks />
         <Proof />
-        <AcceleratorTeaser />
+        <About />
         <Calculator />
         <Faq />
+        <AcceleratorTeaser />
         <FinalCta />
       </main>
       <Footer />

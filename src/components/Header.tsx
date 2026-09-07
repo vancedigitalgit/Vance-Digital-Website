@@ -80,8 +80,8 @@ function EdgeTab({
           aria-label={ariaLabel}
           className={`font-display flex items-center justify-center border border-[var(--color-line)] bg-[var(--color-bg-raised)] font-semibold uppercase tracking-[0.04em] text-[var(--color-ink)] transition-all duration-300 hover:text-[var(--color-accent)] ${
             edge === "top"
-              ? "rounded-b-lg shadow-[0_3px_0_0_rgba(28,24,17,0.85)] hover:shadow-[0_4px_0_0_rgba(28,24,17,0.85)]"
-              : "rounded-t-lg shadow-[0_-3px_0_0_rgba(28,24,17,0.85)] hover:shadow-[0_-4px_0_0_rgba(28,24,17,0.85)]"
+              ? "rounded-b-lg shadow-[0_3px_0_0_rgba(11,20,38,0.85)] hover:shadow-[0_4px_0_0_rgba(11,20,38,0.85)]"
+              : "rounded-t-lg shadow-[0_-3px_0_0_rgba(11,20,38,0.85)] hover:shadow-[0_-4px_0_0_rgba(11,20,38,0.85)]"
           } ${
             expanded
               ? "h-[64px] w-[160px] text-[18px] sm:h-[96px] sm:w-[220px] sm:text-[24px]"
@@ -125,7 +125,7 @@ export function Header() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-[padding,background-color,backdrop-filter,border-color] duration-300 ${
-          condensed
+          condensed || open
             ? "border-b border-[var(--color-line)] bg-[var(--color-bg)]/85 pt-3 pb-2 backdrop-blur-md"
             : "border-b border-transparent bg-transparent pt-5 pb-2 md:pt-7"
         }`}
@@ -142,13 +142,15 @@ export function Header() {
         </Container>
       </header>
 
-      <EdgeTab
-        edge="top"
-        label="Menu"
-        forceExpanded={open}
-        onClick={() => setOpen((v) => !v)}
-        ariaLabel={open ? "Close menu" : "Open menu"}
-      />
+      {!open && (
+        <EdgeTab
+          edge="top"
+          label="Menu"
+          forceExpanded={open}
+          onClick={() => setOpen((v) => !v)}
+          ariaLabel="Open menu"
+        />
+      )}
 
       <div
         id="site-menu"
@@ -157,7 +159,7 @@ export function Header() {
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <div className="flex min-h-full flex-col justify-center py-24 sm:py-28">
+        <div className="flex min-h-full flex-col justify-start py-24 sm:py-28 md:justify-center">
           <Container className="md:grid md:grid-cols-[2fr_1fr] md:items-center md:gap-14">
             <nav className="grid grid-cols-1 xl:grid-cols-2 xl:gap-x-8">
               {NAV_ITEMS.map((item, i) => (
@@ -173,7 +175,7 @@ export function Header() {
                   <span className="font-display shrink-0 text-[13px] text-[var(--color-muted)]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="font-display text-[19px] font-bold tracking-tight text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-accent)] sm:whitespace-nowrap sm:text-[28px] xl:text-[32px]">
+                  <span className="font-display text-[19px] font-bold tracking-tight text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-accent)] sm:text-[28px] xl:text-[32px]">
                     {item.label}
                   </span>
                 </a>
